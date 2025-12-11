@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Fixes Hub - Solutions for Common Tech Issues</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                <h1>TechFixes<span>Hub</span></h1>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active"><i class="fas fa-home"></i> Home</a>
+                <a href="#solutions"><i class="fas fa-wrench"></i> Solutions</a>
+                <a href="#apis"><i class="fas fa-plug"></i> APIs</a>
+            </div>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-content">
+                <h2><i class="fas fa-lightbulb"></i> Tech Solutions at Your Fingertips</h2>
+                <p>Access solutions from multiple free APIs for common tech issues.</p>
+                <div class="search-container">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="searchInput" placeholder="Search for error codes, issues, or tech problems...">
+                        <button id="searchBtn" class="btn-primary">
+                            <i class="fas fa-search"></i> Search
+                        </button>
+                    </div>
+                    <div class="search-filters">
+                        <select id="categoryFilter">
+                            <option value="">All Categories</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                            <option value="web">Web Development</option>
+                            <option value="database">Database</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="loading" id="loadingIndicator" style="display: none;">
+            <div class="spinner"></div>
+            <p>Fetching solutions from APIs...</p>
+        </div>
+
+        <section class="solutions-section">
+            <div class="section-header">
+                <h3><i class="fas fa-list"></i> Tech Solutions</h3>
+                <div class="controls">
+                    <button id="refreshBtn" class="btn-secondary">
+                        <i class="fas fa-sync-alt"></i> Refresh
+                    </button>
+                </div>
+            </div>
+            
+            <div class="solutions-grid" id="solutionsContainer">
+                <!-- Solutions will appear here -->
+                <div class="solution-card placeholder">
+                    <h4>Search for tech issues to see solutions</h4>
+                    <p>Try searching for: "JavaScript error", "Python bug", "React issue", or "API failed"</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="apis-section">
+            <h3><i class="fas fa-plug"></i> Integrated APIs</h3>
+            <div class="apis-grid">
+                <div class="api-card">
+                    <i class="fab fa-stack-overflow"></i>
+                    <h4>Stack Overflow</h4>
+                    <p>Programming Q&A</p>
+                    <span class="status online">Online</span>
+                </div>
+                <div class="api-card">
+                    <i class="fab fa-github"></i>
+                    <h4>GitHub Issues</h4>
+                    <p>Code issues & bugs</p>
+                    <span class="status online">Online</span>
+                </div>
+                <div class="api-card">
+                    <i class="fas fa-code"></i>
+                    <h4>Public APIs</h4>
+                    <p>Various APIs</p>
+                    <span class="status online">Online</span>
+                </div>
+                <div class="api-card">
+                    <i class="fas fa-quote-right"></i>
+                    <h4>Quotes API</h4>
+                    <p>Programming quotes</p>
+                    <span class="status online">Online</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 TechFixesHub. Made with <i class="fas fa-heart"></i> for developers.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
